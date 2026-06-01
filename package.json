@@ -1,0 +1,19 @@
+{
+  "name": "therabby-clinical-tools",
+  "version": "0.1.0",
+  "description": "Open-source browser-based tools for occupational therapy and rehabilitation practice.",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "check": "echo 'Static prototype: no build step yet.'"
+  },
+  "keywords": [
+    "occupational-therapy",
+    "rehabilitation",
+    "accessibility",
+    "clinical-tools",
+    "activity-analysis",
+    "open-source"
+  ]
+}

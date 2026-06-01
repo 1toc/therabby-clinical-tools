@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One-Hand Interaction Trainer</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <header class="tool-header">
+    <a href="../../index.html">← Back</a>
+    <h1>One-Hand Interaction Trainer</h1>
+    <p>Practice basic pointer actions. This tool is for task design and education, not assessment.</p>
+  </header>
+  <main class="tool-main">
+    <section class="card">
+      <p>Instruction: click or tap the large target when it appears.</p>
+      <p>Hits: <span id="hits">0</span> / Average reaction: <span id="avg">-</span> ms</p>
+      <button id="start">Start</button>
+      <div id="target" class="big-target">Press Start</div>
+    </section>
+    <section class="panel">
+      <h2>Adaptation ideas</h2>
+      <ul>
+        <li>Try different target sizes.</li>
+        <li>Compare mouse, trackball, touchpad, and switch access.</li>
+        <li>Observe fatigue, posture, compensatory movement, and frustration.</li>
+        <li>Use the task only as a practice aid, not as a standardized score.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

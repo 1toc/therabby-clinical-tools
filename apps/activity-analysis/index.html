@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Activity Analysis Builder</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <header class="tool-header">
+    <a href="../../index.html">← Back</a>
+    <h1>Activity Analysis Builder</h1>
+    <p>Create a simple activity analysis note for education and clinical reasoning.</p>
+  </header>
+  <main class="tool-main">
+    <section class="card">
+      <div class="form-grid">
+        <label>Activity name <input id="activity" placeholder="e.g., preparing tea" /></label>
+        <label>Target user/context <textarea id="context" placeholder="Age, setting, goals, precautions without identifiable information"></textarea></label>
+        <label>Required body functions and client factors <textarea id="factors"></textarea></label>
+        <label>Performance skills and process demands <textarea id="skills"></textarea></label>
+        <label>Environment and tools <textarea id="environment"></textarea></label>
+        <label>Meaning, motivation, and participation value <textarea id="meaning"></textarea></label>
+        <label>Adaptation ideas <textarea id="adaptation"></textarea></label>
+        <button id="generate">Generate note</button>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>Generated note</h2>
+      <pre id="result" class="result">Your note will appear here.</pre>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
