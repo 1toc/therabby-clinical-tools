@@ -111,6 +111,7 @@ button {
 }
 .target {
   aspect-ratio: 1;
+  color: var(--text);
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
