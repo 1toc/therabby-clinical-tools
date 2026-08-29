@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>Therabby.LoadBalanceViewer</AssemblyName>
+    <RootNamespace>Therabby.LoadBalanceViewer</RootNamespace>
+    <Version>0.3.0</Version>
+    <ApplicationIcon />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4129.50" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ui\index.html" />
+    <EmbeddedResource Include="ui\styles.css" />
+    <EmbeddedResource Include="ui\app.js" />
+    <EmbeddedResource Include="ui\wii-footprints.png" />
+  </ItemGroup>
+
+</Project>
