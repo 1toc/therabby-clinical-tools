@@ -1,0 +1,37 @@
+name: Build PS2 Therabby Pong
+
+on:
+  pull_request:
+    paths:
+      - 'ps2/pong-demo/**'
+      - '.github/workflows/build-ps2-pong.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ELF
+        working-directory: ps2/pong-demo
+        run: |
+          make clean
+          make
+          make dist
+
+      - name: Verify ELF
+        working-directory: ps2/pong-demo
+        run: |
+          test -s THERABBY_PONG.ELF
+          file THERABBY_PONG.ELF
+          ls -lh THERABBY_PONG.ELF
+
+      - name: Upload MX4SIO package
+        uses: actions/upload-artifact@v4
+        with:
+          name: therabby-pong-ps2
+          path: ps2/pong-demo/dist/**
+          if-no-files-found: error
